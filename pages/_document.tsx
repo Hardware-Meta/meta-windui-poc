@@ -48,7 +48,10 @@ const themeScript = `
 
 const Document = () => {
   return (
-    <Html className="h-full antialiased [font-feature-settings:'ss01']">
+    <Html
+      className="h-full antialiased [font-feature-settings:'ss01']"
+      lang="en"
+    >
       <Head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </Head>

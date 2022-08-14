@@ -114,19 +114,7 @@ const navitems = [
     ],
   },
 ];
-const company = [
-  { id: 0, href: "#", icon: InformationCircleIcon },
-  { id: 1, href: "#", icon: InformationCircleIcon },
-  { id: 2, href: "#", icon: InformationCircleIcon },
-  { id: 3, href: "#", icon: InformationCircleIcon },
-  { id: 4, href: "#", icon: InformationCircleIcon },
-];
-const resources = [
-  { id: 0, href: "#", icon: InformationCircleIcon },
-  { id: 1, href: "#", icon: InformationCircleIcon },
-  { id: 2, href: "#", icon: InformationCircleIcon },
-  { id: 3, href: "#", icon: InformationCircleIcon },
-];
+
 const blogPosts = [
   {
     id: 1,
@@ -184,7 +172,7 @@ const Navbar = () => {
                                   open
                                     ? "text-black dark:text-white"
                                     : "text-gray-900 dark:text-neutral-300",
-                                  "group bg-white dark:bg-neutral-800 rounded-md inline-flex items-center text-base font-medium hover:text-gray-600 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-neutral-500"
+                                  "group h-12 bg-white dark:bg-neutral-800 rounded-md inline-flex items-center text-base font-medium hover:text-gray-600 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-neutral-500"
                                 )}
                               >
                                 <span>{item.name}</span>
@@ -335,8 +323,8 @@ const Navbar = () => {
                     <input
                       id="search"
                       name="search"
-                      className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-neutral-50 dark:bg-neutral-700 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-neutral-100 dark:focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm"
-                      placeholder="Sitewide Search"
+                      className="block w-full h-12 pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-neutral-50 dark:bg-neutral-700 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-neutral-100 dark:focus:bg-white focus:border-white focus:ring-white focus:text-gray-900 sm:text-sm"
+                      placeholder="Search"
                       type="search"
                     />
                   </div>
@@ -349,9 +337,9 @@ const Navbar = () => {
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:dark:text-white dark:hover:bg-neutral-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XIcon className="block h-8 w-8" aria-hidden="true" />
                   ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    <MenuIcon className="block h-8 w-8" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -373,7 +361,7 @@ const Navbar = () => {
                               open
                                 ? "text-black dark:text-white"
                                 : "text-gray-900 dark:text-neutral-300",
-                              "group bg-white dark:bg-neutral-800 rounded-md inline-flex items-center text-base font-medium hover:text-gray-600 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-neutral-500"
+                              "group h-12 w-full bg-white dark:bg-neutral-800 rounded-md inline-flex items-center text-base font-medium hover:text-gray-600 focus:outline-none focus:ring-0 focus:ring-offset-0 focus:ring-neutral-500"
                             )}
                           >
                             <span>{item.name}</span>

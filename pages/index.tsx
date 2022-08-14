@@ -5,7 +5,10 @@ import Navbar from "../components/navbar";
 const Home: NextPage = () => {
   return (
     <>
-      <Navbar />
+      <Head>
+        <title>Home</title>
+        <meta name="description" content="This is the home page" />
+      </Head>
     </>
   );
 };
