@@ -1,4 +1,6 @@
 import type { SVGProps } from "react";
+import { HomeIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 
 const social = [
   {
@@ -41,11 +43,16 @@ const social = [
   },
 ];
 
+const crumbs = [
+  { name: "Category", href: "/", current: false },
+  { name: "Post", href: "#", current: true },
+];
+
 const PostPage = () => {
   return (
     <>
       {/* Featured Image */}
-      <div className="flex justify-center items-center mb-4 aspect-[32/9] bg-gray-300 rounded dark:bg-neutral-700">
+      <div className="flex justify-center items-center aspect-[21/9] bg-gray-300 rounded dark:bg-neutral-700">
         <svg
           className="w-32 h-32 text-gray-200 dark:text-neutral-600"
           xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +64,48 @@ const PostPage = () => {
         </svg>
       </div>
       {/* End Featured Image */}
-
+      {/* Bread Crumbs */}
+      <nav className="flex max-w-7xl mx-auto px-2 py-8" aria-label="Breadcrumb">
+        <ol role="list" className="flex items-center space-x-4">
+          <li>
+            <div>
+              <Link href="/">
+                <a className="text-gray-400 hover:text-gray-500">
+                  <HomeIcon
+                    className="flex-shrink-0 h-5 w-5"
+                    aria-hidden="true"
+                  />
+                  <span className="sr-only">Home</span>
+                </a>
+              </Link>
+            </div>
+          </li>
+          {crumbs.map((page) => (
+            <li key={page.name}>
+              <div className="flex items-center">
+                <svg
+                  className="flex-shrink-0 h-5 w-5 text-gray-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
+                </svg>
+                <Link href={page.href}>
+                  <a
+                    className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700"
+                    aria-current={page.current ? "page" : undefined}
+                  >
+                    {page.name}
+                  </a>
+                </Link>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </nav>
+      {/* End Bread Crumbs */}
       {/* Post Author */}
       <div role="status" className="max-w-7xl flex flex-col mx-auto px-2">
         <div className="w-full h-2 mb-4 rounded-full bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500" />
@@ -108,7 +156,7 @@ const PostPage = () => {
         <article className="lg:col-span-4 mt-4">
           <div role="status" className="space-y-2.5 mt-10">
             <div className="flex items-center space-x-2 w-full">
-              <div className="h-5 rounded-full bg-amber-500 w-96"></div>
+              <div className="h-5 mb-3 rounded-full bg-amber-500 w-96"></div>
             </div>
             <div className="flex items-center space-x-2 w-full">
               <div className="h-2.5 bg-gray-200 rounded-full dark:bg-neutral-700 w-32"></div>
@@ -145,7 +193,7 @@ const PostPage = () => {
 
           <div role="status" className="space-y-2.5 mt-10">
             <div className="flex items-center space-x-2 w-full">
-              <div className="h-3 rounded-full bg-amber-500 w-96"></div>
+              <div className="h-3 mb-2 rounded-full bg-amber-500 w-96"></div>
             </div>
             <div className="flex items-center space-x-2 w-full">
               <div className="h-2.5 bg-gray-200 rounded-full dark:bg-neutral-700 w-32"></div>
@@ -258,7 +306,7 @@ const PostPage = () => {
           </div>
           <div role="status" className="space-y-2.5 mt-10">
             <div className="flex items-center space-x-2 w-full">
-              <div className="h-3 rounded-full bg-amber-500 w-96"></div>
+              <div className="h-3 mb-2 rounded-full bg-amber-500 w-96"></div>
             </div>
             <div className="flex items-center space-x-2 w-full">
               <div className="h-2.5 bg-gray-200 rounded-full dark:bg-neutral-700 w-32"></div>
@@ -295,7 +343,7 @@ const PostPage = () => {
 
           <div role="status" className="space-y-2.5 mt-8">
             <div className="flex items-center space-x-2 w-full">
-              <div className="h-3 rounded-full bg-amber-500 w-96"></div>
+              <div className="h-3 mb-2 rounded-full bg-amber-500 w-96"></div>
             </div>
             <div className="flex items-center space-x-2 w-full">
               <div className="h-2.5 bg-gray-200 rounded-full dark:bg-neutral-700 w-32"></div>
