@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 
 const featuredPosts = [
   { id: 0, name: "Post One", description: "This is the first post" },
@@ -37,7 +38,7 @@ const Home: NextPage = () => {
                 "p-4 rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-neutral-700"
               )}
             >
-              <a href="/post">
+              <Link href="/post">
                 <div className="flex justify-center items-center mb-4 h-48 bg-gray-300 rounded dark:bg-neutral-700">
                   <svg
                     className="w-12 h-12 text-gray-200 dark:text-neutral-600"
@@ -73,7 +74,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <span className="sr-only">Loading...</span>
-              </a>
+              </Link>
             </div>
           ))}
         </div>
@@ -108,7 +109,7 @@ const Home: NextPage = () => {
                     role="status"
                     className="lg:grid-cols-2 p-4 rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-neutral-700"
                   >
-                    <a href="/post">
+                    <Link href="/post">
                       <div className="flex justify-center items-center mb-4 h-48 bg-gray-300 rounded dark:bg-neutral-700">
                         <svg
                           className="w-12 h-12 text-gray-200 dark:text-neutral-600"
@@ -144,7 +145,7 @@ const Home: NextPage = () => {
                         </div>
                       </div>
                       <span className="sr-only">Loading...</span>
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -177,7 +178,7 @@ const Home: NextPage = () => {
                     role="status"
                     className="lg:grid-cols-2 p-4 rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-neutral-700"
                   >
-                    <a href="/post">
+                    <Link href="/post">
                       <div className="flex justify-center items-center mb-4 h-48 bg-gray-300 rounded dark:bg-neutral-700">
                         <svg
                           className="w-12 h-12 text-gray-200 dark:text-neutral-600"
@@ -213,7 +214,7 @@ const Home: NextPage = () => {
                         </div>
                       </div>
                       <span className="sr-only">Loading...</span>
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -246,7 +247,7 @@ const Home: NextPage = () => {
                     role="status"
                     className="lg:grid-cols-2 p-4 rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-neutral-700"
                   >
-                    <a href="/post">
+                    <Link href="/post">
                       <div className="flex justify-center items-center mb-4 h-48 bg-gray-300 rounded dark:bg-neutral-700">
                         <svg
                           className="w-12 h-12 text-gray-200 dark:text-neutral-600"
@@ -282,7 +283,7 @@ const Home: NextPage = () => {
                         </div>
                       </div>
                       <span className="sr-only">Loading...</span>
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -315,7 +316,7 @@ const Home: NextPage = () => {
                     role="status"
                     className="lg:grid-cols-2 p-4 rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-neutral-700"
                   >
-                    <a href="/post">
+                    <Link href="/post">
                       <div className="flex justify-center items-center mb-4 h-48 bg-gray-300 rounded dark:bg-neutral-700">
                         <svg
                           className="w-12 h-12 text-gray-200 dark:text-neutral-600"
@@ -351,7 +352,7 @@ const Home: NextPage = () => {
                         </div>
                       </div>
                       <span className="sr-only">Loading...</span>
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
