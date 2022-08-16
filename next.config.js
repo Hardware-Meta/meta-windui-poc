@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // basePath: "/meta-windui-poc",
+  basePath: "/meta-windui-poc",
   reactStrictMode: true,
   swcMinify: true,
 };
