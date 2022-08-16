@@ -60,7 +60,7 @@ const PostPage = () => {
 
       {/* Post Author */}
       <div role="status" className="max-w-7xl flex flex-col mx-auto px-2">
-        <div className="w-full h-2 mb-4 rounded-full bg-gradient-to-r from-amber-500 via-amber-500 via-pink-500 to-purple-500" />
+        <div className="w-full h-2 mb-4 rounded-full bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500" />
         <div className="flex space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:items-center">
           <div className="flex justify-end items-center w-48 h-48 rounded sm:w-96">
             <svg
@@ -100,7 +100,7 @@ const PostPage = () => {
           </div>
           <span className="sr-only">Loading...</span>
         </div>
-        <div className="w-full h-2 mt-4 rounded-full bg-gradient-to-r from-amber-500 via-amber-500 via-pink-500 to-purple-500" />
+        <div className="w-full h-2 mt-4 rounded-full bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500" />
       </div>
       {/* End Post Author */}
 
@@ -338,7 +338,7 @@ const PostPage = () => {
               className="absolute inset-0 flex items-center"
               aria-hidden="true"
             >
-              <div className="w-full h-2 rounded-full bg-gradient-to-r from-amber-500 via-amber-500 via-pink-500 to-purple-500" />
+              <div className="w-full h-2 rounded-full bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500" />
             </div>
             <div className="relative flex justify-start px-20">
               <span className="bg-white dark:bg-neutral-800">
@@ -370,7 +370,7 @@ const PostPage = () => {
               className="absolute inset-0 flex items-center"
               aria-hidden="true"
             >
-              <div className="w-full h-2 rounded-full bg-gradient-to-r from-amber-500 via-amber-500 via-pink-500 to-purple-500" />
+              <div className="w-full h-2 rounded-full bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500" />
             </div>
             <div className="relative flex justify-start px-20">
               <span className="bg-white dark:bg-neutral-800">
