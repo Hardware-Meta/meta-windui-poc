@@ -16,6 +16,7 @@ import {
   XIcon,
   MenuIcon,
 } from "@heroicons/react/outline";
+import Link from "next/link";
 
 const navitems = [
   {
@@ -147,18 +148,20 @@ const Navbar = () => {
           <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center px-2 lg:px-0">
-                <div className="flex-shrink-0">
-                  <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="https://hwmeta.com/wp-content/themes/hwmeta/img/logotxtside.png"
-                    alt="Hardware Meta"
-                  />
-                  <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="https://hwmeta.com/wp-content/themes/hwmeta/img/logotxtside.png"
-                    alt="Hrdware Meta"
-                  />
-                </div>
+                <Link as="a" href="/">
+                  <a className="flex-shrink-0">
+                    <img
+                      className="block lg:hidden h-8 w-auto"
+                      src="https://hwmeta.com/wp-content/themes/hwmeta/img/logotxtside.png"
+                      alt="Hardware Meta"
+                    />
+                    <img
+                      className="hidden lg:block h-8 w-auto"
+                      src="https://hwmeta.com/wp-content/themes/hwmeta/img/logotxtside.png"
+                      alt="Hrdware Meta"
+                    />
+                  </a>
+                </Link>
                 <div className="hidden lg:block lg:ml-6">
                   <div className="flex">
                     {/* Current: "dark:bg-neutral-900 dark:text-white", Default: "text-gray-300 dark:hover:bg-neutral-700 hover:dark:text-white" */}
