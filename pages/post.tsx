@@ -152,8 +152,8 @@ const PostPage = () => {
       </div>
       {/* End Post Author */}
 
-      <main className="max-w-7xl mx-auto px-2 grid gap-4 md:grid-cols-2 lg:grid-cols-6">
-        <article className="lg:col-span-4 mt-4">
+      <main className="max-w-7xl mx-auto px-2 flex flex-col md:flex-row gap-4 ">
+        <article className="flex-grow mt-4">
           <div role="status" className="space-y-2.5 mt-10">
             <div className="flex items-center space-x-2 w-full">
               <div className="h-5 mb-3 rounded-full bg-amber-500 w-96"></div>
@@ -379,9 +379,9 @@ const PostPage = () => {
           </div>
         </article>
 
-        <aside className="lg:col-span-2">
+        <aside className="order-first md:order-last flex flex-col">
           {/* Post Additional Content */}
-          <div className="relative mt-10 mb-2">
+          <div className="relative mb-2">
             <div
               className="absolute inset-0 flex items-center"
               aria-hidden="true"
@@ -413,7 +413,7 @@ const PostPage = () => {
           </div>
           {/* Post Additional Content */}
           {/* Post Meta */}
-          <div className="relative mb-2">
+          <div className="relative mb-2 -order-2 md:order-none">
             <div
               className="absolute inset-0 flex items-center"
               aria-hidden="true"
@@ -430,7 +430,7 @@ const PostPage = () => {
           </div>
           <div
             role="status"
-            className="p-4 max-w-full rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-neutral-700 mb-2"
+            className="p-4 max-w-full rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-neutral-700 mb-2 -order-2 md:order-none"
           >
             <div className="h-2.5 bg-gray-200 rounded-full dark:bg-neutral-700 w-32 mb-2.5"></div>
             <div className="mb-10 w-48 h-2 bg-gray-200 rounded-full dark:bg-neutral-700"></div>
