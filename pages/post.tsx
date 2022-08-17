@@ -52,7 +52,7 @@ const PostPage = () => {
   return (
     <>
       {/* Featured Image */}
-      <div className="flex justify-center items-center aspect-[21/9] bg-gray-300 rounded dark:bg-neutral-700">
+      <div className="flex justify-center items-center aspect-[16/9] bg-gray-300 rounded dark:bg-neutral-700 z-0">
         <svg
           className="w-32 h-32 text-gray-200 dark:text-neutral-600"
           xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,10 @@ const PostPage = () => {
       </div>
       {/* End Featured Image */}
       {/* Bread Crumbs */}
-      <nav className="flex max-w-7xl mx-auto px-2 py-8" aria-label="Breadcrumb">
+      <nav
+        className="flex max-w-7xl mx-auto px-4 py-8 xl:-mt-60 bg-white dark:bg-neutral-800 xl:rounded-t xl:shadow"
+        aria-label="Breadcrumb"
+      >
         <ol role="list" className="flex items-center space-x-4">
           <li>
             <div>
@@ -106,55 +109,10 @@ const PostPage = () => {
         </ol>
       </nav>
       {/* End Bread Crumbs */}
-      {/* Post Author */}
-      <div role="status" className="max-w-7xl flex flex-col mx-auto px-2">
-        <div className="w-full h-2 mb-4 rounded-full bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500" />
-        <div className="flex space-y-8 animate-pulse md:space-y-0 md:space-x-8 md:items-center">
-          <div className="flex justify-end items-center w-48 h-48 rounded sm:w-96">
-            <svg
-              className="w-40 h-40 text-gray-200 dark:text-neutral-600 border-4 border-neutral-600 rounded-full"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </div>
-          <div className="ml-5 w-full pr-48">
-            <div className="h-5 rounded-full bg-amber-500 w-48 mb-4"></div>
-            <div className="h-2 bg-gray-200 rounded-full dark:bg-neutral-700 max-w-[480px] mb-2.5"></div>
-            <div className="h-2 bg-gray-200 rounded-full dark:bg-neutral-700 mb-2.5"></div>
-            <div className="h-2 bg-gray-200 rounded-full dark:bg-neutral-700 max-w-[440px] mb-2.5"></div>
-            <div className="h-2 bg-gray-200 rounded-full dark:bg-neutral-700 max-w-[460px] mb-2.5"></div>
-            <div className="h-2 bg-gray-200 rounded-full dark:bg-neutral-700 max-w-[360px]"></div>
-            <div className="mt-8 flex space-x-6">
-              {social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="flex items-center text-gray-500 hover:text-gray-900 dark:text-neutral-500 dark:hover:text-neutral-100"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden="true" />
-                  <span className="ml-2 text-sm">{item.text}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-          <span className="sr-only">Loading...</span>
-        </div>
-        <div className="w-full h-2 mt-4 rounded-full bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500" />
-      </div>
-      {/* End Post Author */}
 
-      <main className="max-w-7xl mx-auto px-2 flex flex-col md:flex-row gap-4 ">
-        <article className="flex-grow mt-4">
-          <div role="status" className="space-y-2.5 mt-10">
+      <main className="max-w-7xl mx-auto p-4 flex flex-col md:flex-row gap-4 bg-white dark:bg-neutral-800 xl:shadow mb-10 z-10">
+        <article className="flex-grow">
+          <div role="status" className="space-y-2.5">
             <div className="flex items-center space-x-2 w-full">
               <div className="h-5 mb-3 rounded-full bg-amber-500 w-96"></div>
             </div>
@@ -379,7 +337,52 @@ const PostPage = () => {
           </div>
         </article>
 
-        <aside className="order-first md:order-last flex flex-col">
+        <aside className="order-first md:order-last flex flex-col lg:max-w-[400px]">
+          {/* Post Author */}
+          <div role="status" className="flex flex-col mb-4">
+            <div className="w-full h-2 mb-4 rounded-full bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500" />
+            <div className="flex flex-wrap space-y-3 animate-pulse justify-center md:items-center">
+              <div className="flex justify-end items-center max-w-24 max-h-24 rounded">
+                <svg
+                  className="w-24 h-24 text-gray-200 dark:text-neutral-600 border-4 border-neutral-600 rounded-full"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                    clipRule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <div className="ml-4 flex-grow">
+                <div className="flex items-center w-full mb-3.5">
+                  <div className="h-3 rounded-full bg-amber-500 w-32 mr-2"></div>
+                  <div className="h-3 rounded-full bg-amber-600 w-24"></div>
+                </div>
+                <div className="h-2 bg-gray-200 rounded-full dark:bg-neutral-700 max-w-[480px] mb-2.5"></div>
+                <div className="h-2 bg-gray-200 rounded-full dark:bg-neutral-700 mb-2.5"></div>
+              </div>
+              <div className="mt-8 basis-full flex flex-wrap justify-center">
+                {social.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="flex items-center text-gray-500 hover:text-gray-900 dark:text-neutral-500 dark:hover:text-neutral-100"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-6 w-6" aria-hidden="true" />
+                    <span className="ml-2 mr-4 text-sm">{item.text}</span>
+                  </a>
+                ))}
+              </div>
+              <span className="sr-only">Loading...</span>
+            </div>
+            {/* <div className="w-full h-2 mt-4 rounded-full bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500" /> */}
+          </div>
+          {/* End Post Author */}
           {/* Post Additional Content */}
           <div className="relative mb-2">
             <div
@@ -413,7 +416,7 @@ const PostPage = () => {
           </div>
           {/* Post Additional Content */}
           {/* Post Meta */}
-          <div className="relative mb-2 -order-2 md:order-none">
+          <div className="relative mb-2 hidden md:block">
             <div
               className="absolute inset-0 flex items-center"
               aria-hidden="true"
@@ -430,7 +433,7 @@ const PostPage = () => {
           </div>
           <div
             role="status"
-            className="p-4 max-w-full rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-neutral-700 mb-2 -order-2 md:order-none"
+            className="p-4 max-w-full rounded border border-gray-200 shadow animate-pulse md:p-6 dark:border-neutral-700 mb-2 hidden md:block"
           >
             <div className="h-2.5 bg-gray-200 rounded-full dark:bg-neutral-700 w-32 mb-2.5"></div>
             <div className="mb-10 w-48 h-2 bg-gray-200 rounded-full dark:bg-neutral-700"></div>
