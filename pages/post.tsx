@@ -393,7 +393,7 @@ const PostPage = () => {
             </div>
             <div className="relative flex justify-start px-20">
               <span className="bg-white dark:bg-neutral-800">
-                <span className="px-2 font-bold text-2xl text-amber-600">
+                <span className="px-2 font-bold text-2xl text-transparent bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500 bg-clip-text">
                   Supplmental
                 </span>
               </span>
@@ -425,7 +425,7 @@ const PostPage = () => {
             </div>
             <div className="relative flex justify-start px-20">
               <span className="bg-white dark:bg-neutral-800">
-                <span className="px-2 font-bold text-2xl text-amber-600">
+                <span className="px-2 font-bold text-2xl text-transparent bg-gradient-to-r from-amber-500 via-pink-500 to-purple-500 bg-clip-text">
                   TL;DR
                 </span>
               </span>
